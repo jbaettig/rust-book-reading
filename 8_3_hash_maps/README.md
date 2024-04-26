@@ -33,4 +33,11 @@ scores.entry(String::from("Blue")).or_insert(50);
 ## Updating a Value Based on the Old Value
 
 ```rs
+let text = "hello world wonderful world";
+let mut map = HashMap::new();
+
+for word in text.split_whitespace() {
+    let count = map.entry(word).or_insert(0);
+    *count += 1;
+}
 ```
